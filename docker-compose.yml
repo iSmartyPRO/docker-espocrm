@@ -1,0 +1,19 @@
+version: '3.3'
+
+services:
+  espocrm:
+    image: espocrm/espocrm:6.1.10
+    container_name: ${DOCKER_CONTAINER_NAME}
+    environment:
+      ESPOCRM_DATABASE_HOST: ${ESPOCRM_DATABASE_HOST}
+      ESPOCRM_DATABASE_NAME: ${ESPOCRM_DATABASE_NAME}
+      ESPOCRM_DATABASE_USER: ${ESPOCRM_DATABASE_USER}
+      ESPOCRM_DATABASE_PASSWORD: ${ESPOCRM_DATABASE_PASSWORD}
+      ESPOCRM_ADMIN_USERNAME: admin
+      ESPOCRM_ADMIN_PASSWORD: password
+      ESPOCRM_SITE_URL: "https://crm.ismarty.pro"
+    volumes:
+      - ./espocrm:/var/www/html
+    restart: unless-stopped
+    ports:
+      - ${ESPOCRM_PORT}:80
