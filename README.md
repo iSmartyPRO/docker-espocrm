@@ -16,6 +16,15 @@ cp .env.sample .env
 vim .env
 ```
 
+в дополнении рекомендую использовать единую сеть для всех контейнеров, для этого отредактировав docker-compose.yml добавив следующие строки:
+```
+networks:
+  default:
+    external:
+      name: "docker-net"
+```
+
+
 ## Удаление
 ```
 docker-compose down
