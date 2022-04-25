@@ -17,3 +17,23 @@ docker-compose up -d
 ```
 docker-compose down
 ```
+
+# Дополнения
+
+## Установка crontab
+Для того чтобы выполнялись автоматически задачи EspoCRM - рекомендуется дополнительно настроить контейнер.
+
+Установка зависимостей
+```
+apt update
+apt install cron
+apt install vim
+```
+Настройка crontab
+```
+crontab -e
+```
+Прописываем следующее:
+```
+* * * * * php -f /var/www/html/cron.php > /dev/null 2>&1
+```
