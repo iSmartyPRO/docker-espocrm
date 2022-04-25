@@ -43,13 +43,19 @@ docker exec -ti espocrm bash
 ```
 apt update
 apt install cron
-apt install vim
+apt install nano
 ```
 Настройка crontab
 ```
-crontab -e
+nano /etc/crontab
 ```
-Прописываем следующее:
+Дописываем следующее:
 ```
 * * * * * php -f /var/www/html/cron.php > /dev/null 2>&1
+```
+
+Проверяем службу cron при необходимости запускаем
+```
+service cron status
+service cron start
 ```
