@@ -10,7 +10,10 @@
 
 ## Установка
 ```
-docker-compose up -d
+git clone https://github.com/iSmartyPRO/docker-espocrm.git espocrm
+cd espocrm
+cp .env.sample .env
+vim .env
 ```
 
 ## Удаление
