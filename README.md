@@ -21,7 +21,7 @@ vim .env
 networks:
   default:
     external:
-      name: "docker-net"
+      name: "docker-lan"
 ```
 
 
