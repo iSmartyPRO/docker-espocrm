@@ -59,3 +59,10 @@ nano /etc/crontab
 service cron status
 service cron start
 ```
+
+# CLI Commands
+
+**Reset password for existing user**
+```
+docker exec espocrm php command.php set-password username
+```
