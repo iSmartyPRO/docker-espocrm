@@ -1,1 +1,3 @@
+backups/*.tar.gz
+espocrm/
 .env
