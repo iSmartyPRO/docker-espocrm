@@ -69,7 +69,7 @@ service cron start
 chmod +x ./backup.sh
 ```
 
-### запуск архива
+### запуск архивации
 ```
 ./backup.sh
 ```
