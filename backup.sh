@@ -9,6 +9,11 @@ echo "Created backup folder $BACKUP_TMP/${DOCKER_CONTAINER_NAME}_${foldername}/e
 # Copy all files to TEMP Folder
 echo "Copying all files to TEMP Folder"
 cp -rf ./espocrm $BACKUP_TMP/${DOCKER_CONTAINER_NAME}_${foldername}/espocrm
+cp -rf ./.env $BACKUP_TMP/${DOCKER_CONTAINER_NAME}_${foldername}/
+cp -rf ./backup.sh $BACKUP_TMP/${DOCKER_CONTAINER_NAME}_${foldername}/
+cp -rf ./deploy.sh $BACKUP_TMP/${DOCKER_CONTAINER_NAME}_${foldername}/
+cp -rf ./docker-compose.yml $BACKUP_TMP/${DOCKER_CONTAINER_NAME}_${foldername}/
+cp -rf ./README.md $BACKUP_TMP/${DOCKER_CONTAINER_NAME}_${foldername}/
 
 # Dump database to sql file
 echo "Dumping Database"
